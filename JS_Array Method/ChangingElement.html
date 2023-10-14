@@ -2,16 +2,15 @@
 <html>
     <body>
         <h1>JavaScript Arrays</h1>
-        <h2>The unshift() Method</h2>
-
-        <p>The unshift() method adds new element to the beginning of an array:</p>
+        <h2>Bracket Indexing</h2>
+        <p>Array elements are accesses using their index number:</p>
 
         <p id="demo1"></p>
         <p id="demo2"></p>
         <script>
-            const fruits=["Banana", "Orange", "Apple", "Mango"];
+            const fruits=["Banana","Orange", "Apple", "Mango"];
             document.getElementById("demo1").innerHTML=fruits;
-            fruits.unshift("Lemon");
+            fruits[0]="Kiwi";
             document.getElementById("demo2").innerHTML=fruits;
         </script>
     </body>
