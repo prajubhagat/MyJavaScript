@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>JavaScript Arrays</h1>
+        <h2>The enteries() method</h2>
+        <p>enteries() returns an Array Iterator object with key/value pairs:</p>
+        <p id="demo"></p>
+        <script>
+            const fruits=["Banana", "Orange", "Apple", "Mango"];
+            const f=fruits.entries();
+            for (let x of f) {
+
+                document.getElementById("demo").innerHTML += x + "<br>";
+            }
+        </script>
+
+        <p>The enteries() method is not supported in Internet Explorer 11 (or earlier).</p>
+    </body>
+</html>
