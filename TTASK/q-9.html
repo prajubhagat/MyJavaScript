@@ -2,42 +2,19 @@
 <html>
 
 <body>
-    <h3> </h3>
-
+    <h3>HEADING </h3>
+<p id="demo"></p>
     <script>
-        const descendingOrder = n => {
-            if (n < 10) {
-                return n;
-            }
+const inputWords = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
 
-            const digits = [];
+const longWords = inputWords.filter(word => word.length > 5);
 
-            while (n > 0) {
-                const digit = n % 10;
-                digits.push(digit);
-                n = Math.floor(n / 10);
-            }
+//console.log(longWords);  
 
-            digits.sort((a, b) => b - a);
-
-            let result = 0;
-            for (let i = 0; i < digits.length; i++) {
-                result = result * 10 + digits[i];
-            }
-
-            return result;
-
-
-        };
-        console.log(descendingOrder(0)); // 0
-        console.log(descendingOrder(1)); // 1
-        console.log(descendingOrder(1021)); // 2110
-        console.log(descendingOrder(42145)); // 54421
-        console.log(descendingOrder(145263)); // 654321
-        console.log(descendingOrder(123456789)); // 987654321
-
+document.getElementById("demo").innerHTML=longWords;
 
     </script>
+    
 </body>
 
 </html>
