@@ -4,7 +4,7 @@
         <title>Change Background Color</title>
         <style>
             body {
-                background-color:red;
+                background-color:rgb(94, 12, 12);
                 text-align: center;
                 margin-top:60px;
     
@@ -20,8 +20,8 @@
     </head>
     <script>
         function changeBackgroundColor() {
-            let colors = ["voilet","blue", "yellow" ,"orangered" ,"green","pink", "black"];
-            let Number= Math.floor(Math.random() * colors.length);
+            let colors = ["skyblue","blue", "yellow" ,"red" ,"green","pink", "black", "gray"];
+           let Number= Math.floor(Math.random() * colors.length);
             let randomColor= colors[Number];
 
             document.body.style.backgroundColor=randomColor;
