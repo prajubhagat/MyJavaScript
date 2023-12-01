@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: whitesmoke;
+            text-align: center;
+            margin-top: 30px;
+
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(15, 83, 83);
+            color: white;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<script>
+    const quote = ["Be the change you wish to see in the world."
+
+    ];
+    const author = ["Mahatma Gandhi",];
+   // function changeQuote() {
+        document.getElementsByTagName("p")[0].innerHTML= "Be the change you wish to see in the world.";
+        document.getElementsByTagName("p")[1].innerHTML="Mahatma Gandhi";
+       // document.getElementsByClassName("change").innerHTML="The only way to do great work is to love what you do.";
+        //document.getElementsByClassName("change").innerHTML="Steve Jobs";
+        //document.getElementsById("demo").innerHTML="";
+        //document.getElementsById("demo").innerHTML="";
+    }
+</script>
+<body>
+<button onclick="changeQuote()">Generate Quote</button>
+<p >Success is not final, failure is not fatal: It is the courage to continue that counts.</p>
+<p >Winston Churchill</p>
+
+
+</body>
+
+</html>
