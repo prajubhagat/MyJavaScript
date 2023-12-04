@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: rgb(64, 61, 61);
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        button {
+
+            padding:15px 25px;
+            background-color: rgb(166, 231, 76);
+            color: white;
+            font-size: 20px;
+            border-radius: 6px;
+        }
+
+        div {
+            margin-top: 40%;
+            background-color: white;
+            padding: 50px;
+            margin-left: 25%;
+            margin-right: 25%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button onclick="count()">Click Me</button>
+        <p><b>You clicked The Button<span style="color:red" id="incount">0</span>Times.</b></p>
+    </div>
+
+    <script>
+        function count() {
+            let count = document.getElementById("incount").innerHTML;
+            let num = +count;
+            num = num + 1;
+            document.getElementById("incount").innerHTML = num;
+        }
+    </script>
+</body>
+
+</html>
