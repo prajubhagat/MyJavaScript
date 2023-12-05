@@ -11,7 +11,7 @@
 
         button {
 
-            padding:15px 25px;
+            padding:15px 20px;
             background-color: rgb(166, 231, 76);
             color: white;
             font-size: 20px;
@@ -31,16 +31,16 @@
 
 <body>
     <div>
-        <button onclick="count()">Click Me</button>
-        <p><b>You clicked The Button<span style="color:red" id="incount">0</span>Times.</b></p>
+        <button onclick="Ncount()">Click Me</button>
+        <p><b>You clicked The Button <span style="color:red" id="count"> 0 </span> Times.</b></p>
     </div>
 
     <script>
-        function count() {
-            let count = document.getElementById("incount").innerHTML;
-            let num = +count;
+        function Ncount() {
+            let counts = document.getElementById("count").innerHTML;
+            let num = +counts;
             num = num + 1;
-            document.getElementById("incount").innerHTML = num;
+            document.getElementById("count").innerHTML = num;
         }
     </script>
 </body>
