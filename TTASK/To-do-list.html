@@ -1,62 +1,45 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta name="viewport" content="" width=device-width, initial-scale="1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-      
+       
     </style>
 </head>
-
 <body>
-    <div>
+
+<div id="todoList">
     <h1>To-Do List</h1>
-    
-    <input type="text"id="taskInput" placeholder="AddValue" value="">
-    <button onclick="addTask()">Add</button>
-    
-    
-    <ul id="tasks"> </ul>
-    </div>
+    <input type="text" id="taskInput" placeholder="Add a new task">
+    <button id="addTaskBtn">Add Task</button>
+    <ul id="tasks"></ul>
+</div>
 
+<script>
+    document.addEventListener("click", function () {
+        // Get the input and button elements
+        let taskInput = document.getElementById("taskInput");
+        let addTaskBtn = document.getElementById("addTaskBtn");
+        let tasksList = document.getElementById("tasks");
 
+        // Add click event listener to the button
+        addTaskBtn.addEventListener("click", function () {
+            addTask();
+        });
 
-    <script>
+        function addTask() {
+            // Get the input value
+            let taskText = taskInput.value;
+                // Create a new list item
+                let li = document.createElement("li");
+            
 
+            } 
+        }
+    );
+</script>
 
-function addTask() {
-    
-    let taskInput =document.getElementById("taskInput");
-    let taskText=taskInput.value;
-
-    var li = document.createElement("li");
-            li.appendChild(document.createTextNode(taskText));
-
-
-document.getElementById("tasks").appendChild(li);
-
-
-}
-
-
-    
-
-
-       
-
-
-
-
-
-
-
-
-
-    </script>
 </body>
-
 </html>
