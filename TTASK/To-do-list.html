@@ -10,36 +10,35 @@
 </head>
 <body>
 
-<div id="todoList">
     <h1>To-Do List</h1>
-    <input type="text" id="taskInput" placeholder="Add a new task">
-    <button id="addTaskBtn">Add Task</button>
-    <ul id="tasks"></ul>
-</div>
-
-<script>
-    document.addEventListener("click", function () {
-        // Get the input and button elements
-        let taskInput = document.getElementById("taskInput");
-        let addTaskBtn = document.getElementById("addTaskBtn");
-        let tasksList = document.getElementById("tasks");
-
-        // Add click event listener to the button
-        addTaskBtn.addEventListener("click", function () {
-            addTask();
-        });
-
-        function addTask() {
-            // Get the input value
-            let taskText = taskInput.value;
-                // Create a new list item
-                let li = document.createElement("li");
-            
-
-            } 
+    
+    <input type="text" id="taskInput" placeholder="Add">
+    <button onclick="addTask()">Add Task</button>
+    
+    <ul id="taskList"></ul>
+  
+    <script>
+      function addTask() {
+        // Get the input value
+        let taskInput = document.getElementById('taskInput');
+        let taskText = taskInput.value;
+  
+        // Clear the input field
+        taskInput.value = '';
+  
+        // Check if the input is not empty
+       if (taskText.trim() !== '') {
+          // Create a new list item
+          let newTask = document.createElement('li');
+          newTask.textContent = taskText;
+  
+          // Add the task to the list
+        let taskList = document.getElementById('taskList');
+          taskList.appendChild(newTask);
         }
-    );
-</script>
-
-</body>
+    }
+      
+    </script>
+  
+  </body>
 </html>
