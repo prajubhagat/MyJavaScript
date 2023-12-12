@@ -2,17 +2,18 @@
 <html>
     
     <body>
-        <div id="mymove">
-    <p id="demo">Courses Like: <b>C programming</b></p>
-    </div>
-   
-    <script>
-        document.getElementById("mymove").addEventListener("mousemove", myFunction);
-        function myFunction() {
-            document.getElementById("demo").innerHTML = Math.random();
-}
-    </script>
+    <p >Courses Like:<b id="demo"></b></p>
+
     
-       
+   
+    
+
+<script>
+let x = document.getElementById("demo");
+setTimeout(function(){ x.innerHTML="C language" });
+setTimeout(function(){ x.innerHTML="React" }, 1000);
+setTimeout(function(){ x.innerHTML="JavaScript" }, 2000);
+setTimeout(function(){ x.innerHTML="HTML" }, 3000);
+</script>
     </body>
 </html> 
