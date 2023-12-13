@@ -27,7 +27,7 @@
         taskInput.value = '';
   
         // Check if the input is not empty
-       if (taskText.trim() !== '') {
+       if (!(taskText =="")) {
           // Create a new list item
           let newTask = document.createElement('li');
           newTask.textContent = taskText;
