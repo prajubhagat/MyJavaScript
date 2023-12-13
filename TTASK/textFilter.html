@@ -20,16 +20,15 @@
             <li>Orange</li>
         </ul>
 
-        <script>
-            document.getElementById("demo");
-            li= ul.getElementsByTagName("li");
+       
 
-            for (i=0; i < li.length; i++) {}
-            function Filter() {
-                let input, filter, ul, li, i;
 
-                input=document.getElementById("filter")
-            }
-        </script>
+<script>
+    const fruits = ["Apple", "Banana", "Grape" , "Orange"];
+    let Items = fruits.filter((AllFruits)=>["Apple", "Banana", "Grape" , "Orange"].includes(Allfruits));
+
+    document.getElementById("filter").innerHTML=Items;
+    
+</script>
     </body>
 </html>
