@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Courses like:<b id="demo"></b></p>
+
+        <script>
+            let courses =["C programming", "React", "JavaScript", "HTML"];
+            let currentcoursesIndex=0;
+
+            setInterval(function() {
+                let nextcourses= courses[currentcoursesIndex];
+
+                document.getElementById("demo").textContent=nextcourses;
+                currentcoursesIndex++;
+
+                if (currentcoursesIndex >= courses.length) {
+                    currentcoursesIndex=0;
+                }
+            },1000);
+        </script>
+    </body>
+</html>
