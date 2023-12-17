@@ -11,7 +11,7 @@
     <body>
         <h1>Text Filter</h1>
         <label for="Items">Filter Items:</label>
-        <input type="text" id="filter" name="Items">
+        <input type="text" id="filter" name="Items" oninput="Filter_list()">
         
         <ul id="demo">Available Items:
             <li>Apple</li>
@@ -24,10 +24,20 @@
 
 
 <script>
-    const fruits = ["Apple", "Banana", "Grape" , "Orange"];
-    let Items = fruits.filter((AllFruits)=>["Apple", "Banana", "Grape" , "Orange"].includes(Allfruits));
+   let filter_input = document.getElementById("filter").value.toLowerCase();
+   let items = document.getElementById("demo").getElementsByTagName("li");
+   function Filter_list(){
+    for( let i=0;i<=items.length; i++){
+        const filter = items[i].textContent.toLowerCase();
+        if(filter_input.includes(filter)){
+            items[i].style.display = " list-item";  //display list-item
 
-    document.getElementById("filter").innerHTML=Items;
+        }
+        else{
+            items[i].style.display = "none";
+        }
+    }
+   }
     
 </script>
     </body>
